@@ -15,7 +15,7 @@ export const config = {
   dialect: "postgres",
   aws_access_key_id: process.env.AWS_ACCESS_KEY_ID,
   aws_secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
-  aws_region: process.env.AWS_REGION,
+  aws_region: process.env.AWS_DEFAULT_REGION,
   aws_profile: process.env.AWS_PROFILE,
   aws_media_bucket: process.env.AWS_BUCKET,
   url: "http://hbucketh.s3-website-us-east-1.amazonaws.com",
