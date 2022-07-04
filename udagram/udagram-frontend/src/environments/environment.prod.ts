@@ -6,7 +6,7 @@ export const environment = {
   production: true,
   appName: "contacts",
   apiHost:
-    "https://contacts-env.eba-qfzyfjip.us-east-1.elasticbeanstalk.com/api/v0",
+    "http://contacts-env.eba-qfzyfjip.us-east-1.elasticbeanstalk.com/api/v0",
 };
 
 /*
