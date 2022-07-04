@@ -9,50 +9,53 @@ jobs:
   deploy:
     docker:
       # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
+      - image: "cimg/base:stable"
     steps:
       # install node and checkout code
-      - node/install:
-          node-version: "14.15"
+      - node/install
+      - checkout
       - eb/setup
       - aws-cli/setup
-      - checkout
-      # Use root level package.json to install dependencies in the frontend app
+      # Install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
           command: |
             npm run frontend:install
-      # TODO: Install dependencies in the the backend API
-      - run:
-          name: Install API Dependencies
-          command: |
-            npm run api:install
-      # TODO: Build the frontend app
+      # Install dependencies in the the backend API
+      # - run:
+      #     name: Install API Dependencies
+      #     command: |
+      #       npm run api:install
+      # Build the frontend app
       - run:
           name: Front-End Build
           command: |
             npm run frontend:build
-      # TODO: Build the backend API
-      - run:
-          name: API Build
-          command: |
-            npm run api:build
-      - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
-      - run:
-          name: Front-End E2E
-          command: |
-            npm run frontend:e2e
+      # Build the backend API
+      # - run:
+      #     name: API Build
+      #     command: |
+      #       npm run api:build
+      # Test the frontend app
+      # - run:
+      #     name: Front-End Test
+      #     command: |
+      #       npm run frontend:test
+      # E2e test
+      # - run:
+      #     name: Front-End E2E
+      #     command: |
+      #       npm run frontend:e2e
+      # Deploy the frontend app
       - run:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
-      - run:
-          name: API Deploy
-          command: |
-            npm run api:deploy
+      # Deploy the backend API
+      # - run:
+      #     name: API Deploy
+      #     command: |
+      #       npm run api:deploy
 
 workflows:
   udagram:
