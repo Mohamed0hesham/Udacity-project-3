@@ -18,40 +18,40 @@ jobs:
       - aws-cli/setup
       - checkout
       # Install dependencies in the frontend app
-      - run:
-          name: Install Front-End Dependencies
-          command: |
-            npm run frontend:install
+      # - run:
+      #     name: Install Front-End Dependencies
+      #     command: |
+      #       npm run frontend:install
       # Install dependencies in the the backend API
       - run:
           name: Install API Dependencies
           command: |
             npm run api:install
       # Build the frontend app
-      - run:
-          name: Front-End Build
-          command: |
-            npm run frontend:build
+      # - run:
+      #     name: Front-End Build
+      #     command: |
+      #       npm run frontend:build
       # Build the backend API
       - run:
           name: API Build
           command: |
             npm run api:build
       # Test the frontend app
-      - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
-      # E2e test
-      - run:
-          name: Front-End E2E
-          command: |
-            npm run frontend:e2e
+      # - run:
+      #     name: Front-End Test
+      #     command: |
+      #       npm run frontend:test
+      # # E2e test
+      # - run:
+      #     name: Front-End E2E
+      #     command: |
+      #       npm run frontend:e2e
       # Deploy the frontend app
-      - run:
-          name: Front-End Deploy
-          command: |
-            npm run frontend:deploy
+      # - run:
+      #     name: Front-End Deploy
+      #     command: |
+      #       npm run frontend:deploy
       # Deploy the backend API
       - run:
           name: API Deploy
