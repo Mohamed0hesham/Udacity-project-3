@@ -62,7 +62,7 @@ jobs:
             npm run api:deploy
 
 workflows:
-  build-deploy:
+  udagram:
     jobs:
       - build-deploy:
           filters:
