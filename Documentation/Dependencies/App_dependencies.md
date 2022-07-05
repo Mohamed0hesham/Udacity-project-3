@@ -1,5 +1,7 @@
 # Fronend dependencies
 
+- The frontend using `Angular`
+
 ```
 "dependencies": {
     "@angular/common": "^8.2.14",
@@ -48,6 +50,8 @@
 ```
 
 # Backend API dependencies
+
+- The backend using `Node.js - Express`
 
 ```
 "dependencies": {
