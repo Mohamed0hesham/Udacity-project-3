@@ -62,10 +62,9 @@ jobs:
             npm run api:deploy
 
 workflows:
-  udagram:
+  build-deploy:
     jobs:
-      - build-deploy
-          triggers:
-           branches:
-            only:
-               - master
+      - build-deploy:
+          filters:
+            branches:
+              only: master
